@@ -42,15 +42,18 @@ function calcIdade() {
 }
 
 function idadeAuto() {
-    var data = document.getElementById('data')
-    var hoje = new Date()
-    alert(hoje)
-    var calcular = data - hoje.getUTCDate()
-    res.innerHTML = `A sua idade é ${calcular}`
+    const now = new Date(); // Data de hoje
+    const past = new Date(document.querySelector("#data").value); // Outra data no passado
+    const diff = Math.abs(now.getTime() - past.getTime()); // Subtrai uma data pela outra
+    const years = Math.ceil(diff / (1000 * 60 * 60 * 24 * 365)); // Divide o total pelo total de milisegundos correspondentes a 1 dia. (1000 milisegundos = 1 segundo).
+
+    res.innerHTML = `A sua idade é ${years - 1}`
 }
+
 // bemVindo()
 // confirmar()
 // nome()
 // sobreNome()
 // calcNome()
 // calcIdade()
+// idadeAuto()
