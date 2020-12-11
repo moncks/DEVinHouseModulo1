@@ -1,9 +1,8 @@
-/* Novamente considerando a entidade Pessoa do exercício 3: https://trello.com/c/LgeM2xcO 
-crie uma função que receba uma lista de pessoas e retorne uma nova lista contendo apenas as
- pessoas com idade menor que 18 anos.*/
+/* Novamente considerando a entidade Pessoa do exercício 3: https://trello.com/c/LgeM2xcO
+ crie uma função que receba uma lista de pessoas e retorne a primeira pessoa com idade maior que 18 anos.*/
 
 
-//FILTER
+//FIND
 
 const pessoa = [{
     nome: 'Pessoa 1',
@@ -23,6 +22,6 @@ const pessoa = [{
 }]
 
 const encontrarMaiorDeIdade = pessoa =>
-    pessoa.find(pessoa => pessoa.idade > 18)
+    pessoa.find(pessoa => pessoa.idade >= 18)
 
 console.log(encontrarMaiorDeIdade(pessoa))

@@ -22,7 +22,7 @@ const pessoa = [{
     profissao: 'criar adolescente'
 }]
 
-const encontrarMaiorDeIdade = pessoa =>
-    pessoa.find(pessoa => pessoa.idade > 18)
+const verificarProfissao = pessoa =>
+    pessoa.every(pessoa => pessoa.profissao == 'Programador')
 
-console.log(encontrarMaiorDeIdade(pessoa))
+console.log(verificarProfissao(pessoa))
